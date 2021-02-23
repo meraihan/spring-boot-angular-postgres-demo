@@ -11,6 +11,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
@@ -59,7 +64,7 @@ public class UserRepositoryTest {
 
     @Test
     public void findByUserName() {
-        String userName = "meraihan";
+        String userName = "admin";
         Optional<User> user = userRepository.findByUsername(userName);
         assertThat(user.get().getUsername())
                 .isEqualTo(user.get().getUsername());
