@@ -1,5 +1,23 @@
-<div class="container">
-  <header class="jumbotron">
-    <p>{{ content }}</p>
-  </header>
-</div>
+<br>
+<h2> User List</h2><br>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> User Name</th>
+            <th> Email </th>
+            <th> Action </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let user of users" >
+            <td> {{ user.username }} </td>
+            <td> {{ user.email }} </td>
+      
+            <td>
+                <button (click) = "updateUser(user.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteUser(user.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "userDetails(user.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

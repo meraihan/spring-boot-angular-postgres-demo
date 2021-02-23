@@ -1,0 +1,32 @@
+<!-- <h3> View Employee Details</h3>
+<div>
+    <div>
+        <label> <b> User Name: </b></label> {{user.username}}
+    </div>
+    <div>
+        <label> <b> Email: </b></label> {{user.email}}  
+    </div>
+</div> -->
+
+
+
+<div class="col-md-6 offset-md-3">
+    <h3> View Employee Details </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label>User Name</label>
+            <input type="text" class ="form-control" id = "userName"
+                [(ngModel)] = "user.username" name = "username">
+        </div>
+    
+        <div class="form-group">
+            <label> Email</label>
+            <input type="text" class ="form-control" id = "email"
+                [(ngModel)] = "user.email" name = "email">
+        </div>
+
+
+    
+    </form>
+    </div> 
