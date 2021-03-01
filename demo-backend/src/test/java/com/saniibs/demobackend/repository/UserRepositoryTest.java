@@ -54,6 +54,23 @@ public class UserRepositoryTest {
         log.info("User successfully Saved with id: {}", savedUser.getId());
     }
 
+    @Test
+    public void update() {
+        User user = new User();
+        user.setId(1L);
+        user.setUsername("sanibs");
+        user.setPassword(bCryptPassword.encode("aaaaa@"));
+        user.setEmail("sanibs@gmail.com");
+        Set<Role> roles = new HashSet<>();
+        Role role = new Role();
+        role.setRoleName(Role.RoleName.ROLE_ADMIN);
+        roles.add(role);
+        user.setRoles(roles);
+
+        User savedUser = userRepository.save(user);
+        log.info("User successfully updated with id: {}", savedUser.getId());
+    }
+
 
     @Test
     public void findById() {
