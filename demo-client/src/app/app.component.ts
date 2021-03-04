@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   showAdmin = false;
   showUser = false;
   username: string;
-
+  title= 'Proof Of Concept';
   constructor(private tokenStorageService: TokenStorageService) { }
 
   ngOnInit() {

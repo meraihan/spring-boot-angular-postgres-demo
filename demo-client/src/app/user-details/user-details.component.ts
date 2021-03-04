@@ -23,5 +23,8 @@ export class UserDetailsComponent implements OnInit {
     });
   }
 
+  onSubmit(){
+    
+  }
 
 }
