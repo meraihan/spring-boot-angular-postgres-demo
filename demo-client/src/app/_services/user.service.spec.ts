@@ -4,6 +4,7 @@ import {HttpTestingController, HttpClientTestingModule} from '@angular/common/ht
 import {UserService} from './user.service';
 import {User} from '../user';
 
+
 describe('UserService', () => {
   let service : UserService;
   let httpMock: HttpTestingController;
