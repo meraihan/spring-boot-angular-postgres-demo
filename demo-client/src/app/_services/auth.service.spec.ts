@@ -22,18 +22,3 @@ describe('AuthService', () => {
   });
 });
 
-/*
-let location: Location;
-let router: Router;
-
-beforeEach(() => {
-  fixture = TestBed.createComponent(HomepageComponent);
-  component = fixture.componentInstance;
-  fixture.detectChanges();
-
-  router = TestBed.get(Router);
-  location = TestBed.get(Location);
-  router.initialNavigation();
-});
-
-*/

@@ -3,7 +3,10 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {HttpTestingController, HttpClientTestingModule} from '@angular/common/http/testing';
 import {UserService} from './user.service';
 import {User} from '../user';
-
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/from';
+import 'rxjs/add/observable/empty';
+import 'rxjs/add/observable/throw';
 
 describe('UserService', () => {
   let service : UserService;
@@ -19,6 +22,8 @@ describe('UserService', () => {
     httpMock = TestBed.get(HttpTestingController);
   });
 
+
+  //Test case 1
   it('be able to retrive users liset from API bia GET', () => {
       const dummyUsers: User[] = [
         {
@@ -35,6 +40,10 @@ describe('UserService', () => {
           expect(users).toEqual(dummyUsers);
         });
   });
+
+    //Test case 2
+
+
 
   afterEach(() => {
     // httpMock.verify();

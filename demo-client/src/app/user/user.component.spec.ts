@@ -24,6 +24,30 @@ describe('BoardUserComponent', () => {
     fixture.detectChanges();
   });
 
+  // Test 1
+  it('should delete the product from the products array within the component', () => {
+    component.users = [
+      {
+        id: 1,
+        username: 'Abdul Hamid',
+        email: 'hamid@gmail.com'
+      },{
+        id: 2,
+        username: 'Abdul Korim',
+        email: 'korim@gmail.com'
+      }
+    ];
+
+    const productId = 0;
+    component.deleteUser(productId);
+
+    const index = component.users.findIndex(
+      product => product.id === productId
+    );
+    expect(index).toBeLessThan(0);
+  });
+
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
