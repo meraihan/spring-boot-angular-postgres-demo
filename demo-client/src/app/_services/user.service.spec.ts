@@ -24,7 +24,7 @@ describe('UserService', () => {
 
 
   //Test case 1
-  it('be able to retrive users liset from API bia GET', () => {
+  it('be able to retrive users list from API bia GET', () => {
       const dummyUsers: User[] = [
         {
           id: 1,
@@ -42,7 +42,6 @@ describe('UserService', () => {
   });
 
     //Test case 2
-
 
 
   afterEach(() => {

@@ -3,11 +3,16 @@ import { UserService } from '../_services/user.service';
 import { BoardUserComponent } from './user.component';
 import { RouterModule } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/from';
+import 'rxjs/add/observable/empty';
+import 'rxjs/add/observable/throw';
 
 
 describe('BoardUserComponent', () => {
   let component: BoardUserComponent;
   let fixture: ComponentFixture<BoardUserComponent>;
+  let service: UserService;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -46,6 +51,10 @@ describe('BoardUserComponent', () => {
     );
     expect(index).toBeLessThan(0);
   });
+
+
+
+
 
 
   it('should create', () => {
